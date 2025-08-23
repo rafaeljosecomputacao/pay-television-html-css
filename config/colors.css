@@ -1,1 +1,8 @@
 /* Application color configuration */
+
+:root {
+    --background: #2E282A;
+    --primary: #21C063;
+    --secondary: #BDB3B6;
+    --text: #ffffff;
+}

@@ -1,1 +1,147 @@
 /* general */
+
+@import '../config/colors.css';
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Bold.ttf");
+    font-weight: 700;
+}
+
+* {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* header */
+
+header {
+    border-bottom: 1px solid var(--secondary);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.mobile-btn button {
+    background-color: transparent;
+    border: none;
+}
+
+.mobile-menu {
+    display: none;
+    margin-top: 10px;
+}
+
+.mobile-menu li {
+    padding: 10px 0;
+}
+
+.mobile-menu li:first-child {
+    padding-top: 0;
+}
+
+.mobile-menu li:last-child {
+    padding-bottom: 0;
+}
+
+.mobile-menu a {
+    font-weight: 400;
+    color: var(--text);
+}
+
+.mobile-menu-open {
+    display: block;
+}
+
+/* responsive */
+
+@media (min-width: 820px) {
+
+    /* general */
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    /* header */
+
+    .logo a {
+        font-size: 1.7rem;
+    }
+
+    .desktop-menu {
+        display: block;
+    }
+
+    .desktop-menu ul {
+        display: flex;
+        gap: 40px;
+    }
+
+    .desktop-menu a {
+        font-weight: 400;
+        color: var(--text);
+        transition: .7s;
+    }
+
+    .desktop-menu a:hover {
+        color: var(--primary);
+    }
+
+    .mobile-btn {
+        display: none;
+    }
+
+    .mobile-menu-open {
+        display: none;
+    }
+
+}
