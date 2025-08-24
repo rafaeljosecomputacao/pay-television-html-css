@@ -11,3 +11,8 @@ function menuShow() {
         document.querySelector('.mobile-icon').src = "../img/close.svg";
     }
 }
+
+/* Current year for footer */
+
+var year = new Date();
+document.querySelector('.year').innerHTML = year.getFullYear();

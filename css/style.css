@@ -99,6 +99,23 @@ header {
     display: block;
 }
 
+/* footer */
+
+footer {
+    text-align: center;
+}
+
+footer p,
+footer span {
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+footer p {
+    margin: 40px 0;
+}
+
 /* responsive */
 
 @media (min-width: 820px) {
