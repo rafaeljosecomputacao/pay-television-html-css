@@ -48,10 +48,6 @@ ul {
 
 /* header */
 
-header {
-    border-bottom: 1px solid var(--secondary);
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -172,6 +168,91 @@ header {
     color: var(--secondary);
 }
 
+.pricing {
+    text-align: center;
+    padding: 40px 0 0;
+}
+
+.pricing h2,
+.pricing p {
+    margin: 0 0 20px;
+}
+
+.pricing h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.pricing p {
+    font-size: 1.2rem;
+}
+
+.plans {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plan {
+    flex: 1 1 300px;
+}
+
+.plan ul {
+    padding: 20px 0 0;
+}
+
+.plan li {
+    height: 35px;
+    line-height: 35px;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--secondary);
+}
+
+.plan .price,
+.plan .name,
+.plan button,
+.contact button {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+.plan .price {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    text-align: center;
+    line-height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plan .name {
+    padding: 20px 0;
+}
+
+.plan button,
+.contact button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    opacity: 1;
+}
+
+.plan button {
+    margin: 20px 0;
+}
+
+.plan button i,
+.contact button i {
+    background-color: transparent;
+    color: var(--text);
+    padding-right: 10px;
+}
+
 .contact {
     text-align: center;
     padding: 20px 0 0;
@@ -191,7 +272,7 @@ header {
     color: var(--text);
     font-weight: 300;
     font-size: 1rem;
-    border: 1px solid var(--secondary);
+    border: 2px solid var(--secondary);
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -203,7 +284,7 @@ header {
 .contact input[type=text]:focus,
 .contact input[type=email]:focus,
 .contact textarea:focus {
-    border: 1px solid var(--primary);
+    border: 2px solid var(--primary);
     outline: none;
 }
 
@@ -212,22 +293,7 @@ header {
 }
 
 .contact button {
-    width: 100%;
     margin: 20px 0 0;
-    padding: 10px 0;
-    background-color: var(--primary);
-    color: var(--text);
-    font-weight: 500;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    opacity: 1;
-}
-
-.contact button i {
-    background-color: transparent;
-    color: var(--text);
-    padding-right: 10px;
 }
 
 /* footer */
@@ -278,6 +344,19 @@ footer p {
 
     .specialties ul li:last-child {
         padding-right: 0;
+    }
+
+    .plan {
+        flex: 1 1 230px;
+        margin: 0 5px;
+    }
+
+    .plan:first-child {
+        margin-left: 0;
+    }
+
+    .plan:last-child {
+        margin-right: 0;
     }
 
 }
@@ -342,7 +421,35 @@ footer p {
         padding: 20px 20px 0;
     }
 
-    .contact input {
+    .plan {
+        max-width: 325px;
+    }
+
+    .plan:first-child {
+        margin-left: auto;
+    }
+
+    .plan:last-child {
+        margin-right: auto;
+    }
+
+    .plan button,
+    .contact button {
+        transition: .7s;
+        cursor: pointer;
+    }
+
+    .plan button:hover,
+    .contact button:hover {
+        opacity: .7;
+    }
+
+    .contact {
+        padding: 40px 0 0;
+    }
+
+    .contact input,
+    .contact button {
         max-width: 400px;
     }
 
@@ -355,14 +462,10 @@ footer p {
         margin-top: 15px;
     }
 
-    .contact button {
-        max-width: 400px;
-        transition: .7s;
-        cursor: pointer;
-    }
+    /* footer */
 
-    .contact button:hover {
-        opacity: .7;
-    }  
+    footer p {
+        margin: 40px 0 60px;
+    }
 
 }
